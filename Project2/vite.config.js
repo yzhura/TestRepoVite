@@ -10,7 +10,7 @@ htmlFiles.forEach((file) => {
 });
 
 export default defineConfig({
-  base: '/',
+  base: '/Project2',
   root: 'src',
   publicDir: '../public',
   plugins: [
