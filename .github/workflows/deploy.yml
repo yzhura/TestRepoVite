@@ -1,4 +1,3 @@
-# Пример рабочего процесса для развертывания статических страниц на GitHub Pages
 name: Deploy static pages
 
 on:
@@ -17,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deply:
+  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
