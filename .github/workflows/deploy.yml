@@ -24,18 +24,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       # First proj:
       - name: Build Project1
         working-directory: ./Project1
         run: |
           npm install
           npm run build
+
       # Second proj:
       - name: Build Project2
         working-directory: ./Project2
         run: |
           npm install
           npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
