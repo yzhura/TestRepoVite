@@ -31,6 +31,7 @@ jobs:
         run: |
           npm install
           npm run build
+          rm -rf node_modules
 
       # Second proj:
       - name: Build Project2
@@ -38,12 +39,7 @@ jobs:
         run: |
           npm install
           npm run build
-
-      # **Remove node_modules folders**
-      - name: Remove node_modules folders
-        uses: kentaro-m/delete-action@v1.1.0
-        with:
-          patterns: "**/node_modules"
+          rm -rf node_modules
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
