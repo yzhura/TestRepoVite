@@ -10,7 +10,7 @@ htmlFiles.forEach((file) => {
 });
 
 export default defineConfig({
-  base: '/Project2',
+  base: '/ViteMultipleProjectsDeployment/Project2',
   root: 'src',
   publicDir: '../public',
   plugins: [
