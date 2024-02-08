@@ -39,13 +39,18 @@ jobs:
           npm install
           npm run build
 
+      # **Remove node_modules folders**
+      - name: Remove node_modules folders
+        uses: kentaro-m/delete-action@v1.1.0
+        with:
+          patterns: "**/node_modules"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: "."
-          ignore: ["**/node_modules"]
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
