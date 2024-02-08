@@ -10,7 +10,10 @@ htmlFiles.forEach((file) => {
 });
 
 export default defineConfig({
-  base: '/ViteMultipleProjectsDeployment/Project1',
+  base:
+    process.env.NODE_ENV === 'development'
+      ? '/'
+      : '/ViteMultipleProjectsDeployment/Project1/dist',
   root: 'src',
   publicDir: '../public',
   plugins: [
